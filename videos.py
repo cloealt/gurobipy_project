@@ -67,7 +67,7 @@ def lire_instance(input_path):
     return V, E, R, C, X, video_sizes, endpoints, requests
 
 
-def build_model(V, E, R, C, X, video_sizes, endpoints, requests):
+def creer_modele(V, E, R, C, X, video_sizes, endpoints, requests):
     """
     Construit le modele PLNE pour le probleme de video streaming.
 
@@ -218,7 +218,7 @@ def main(argv):
     input_path = argv[1]
 
     V, E, R, C, X, video_sizes, endpoints, requests = lire_instance(input_path)
-    model, env, x = build_model(V, E, R, C, X, video_sizes, endpoints, requests)
+    model, env, x = creer_modele(V, E, R, C, X, video_sizes, endpoints, requests)
     resol_restit(model, env, x, C, "videos.out")
     return 0
 
